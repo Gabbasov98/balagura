@@ -1,0 +1,167 @@
+<!DOCTYPE html> <html lang="ru">
+
+<head>
+    <meta charset="UTF-8">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+    <meta name="description" content="">
+    <meta name="keywords" content="">
+    <link rel="stylesheet" href="css/libs.min.css">
+    <link rel="stylesheet" href="css/style.min.css">
+    <title>Главная</title>
+</head>
+
+
+<style>
+    .wrapper a {
+        font-size: 30px;
+        text-transform: capitalize;
+    }
+
+    .wrapper button {
+        margin-bottom: 25px;
+        width: 300px;
+        height: 45px;
+    }
+</style>
+
+<body>
+
+    <div class="wrapper" style="padding: 50px;">
+        <a href="index.html" style="display: block; margin-bottom: 20px;">
+            Главная
+        </a>
+        <a href="catalog.html" style="display: block; margin-bottom: 20px;">
+            Каталог
+        </a>
+        <a href="catalog-item.html" style="display: block; margin-bottom: 20px;">
+            Карточка товара
+        </a>
+        <a href="catalog-item2.html" style="display: block; margin-bottom: 20px;">
+            Карточка товара 2
+        </a>
+        <a href="buy.html" style="display: block; margin-bottom: 20px;">
+            КУПИТЬ ОНЛАЙН
+        </a>
+        <a href="blog.html" style="display: block; margin-bottom: 20px;">
+            БЛОГ
+        </a>
+        <a href="blog-item.html" style="display: block; margin-bottom: 20px;">
+            Статья
+        </a>
+        <a href="about.html" style="display: block; margin-bottom: 20px;">
+            О бренде
+        </a>
+        <a href="contacts.html" style="display: block; margin-bottom: 20px;">
+            Контакты
+        </a>
+
+
+
+
+        <button style="border: 2px solid #000;margin-bottom: 20px;" data-modal="orderModal">
+            Заказать
+        </button>
+        <button style="border: 2px solid #000;margin-bottom: 20px;" data-modal="thankModal">
+            СПАСИБО
+        </button>
+
+    </div>
+
+    <div class="modal" id="orderModal">
+    <div class="modal__dialog">
+        <button type="button" class="modal__close mbtn" data-bs-dismiss="modal" aria-label="Close">
+            <svg width="11" height="11" viewBox="0 0 11 11" fill="none" xmlns="http://www.w3.org/2000/svg">
+                <path d="M1.14716 2.90571C0.555114 2.31366 0.555114 1.35377 1.14716 0.761724C1.7392 0.169679 2.69909 0.169679 3.29113 0.761724L10.259 7.72967C10.8511 8.32172 10.8511 9.28161 10.259 9.87365C9.66701 10.4657 8.70712 10.4657 8.11507 9.87365L1.14716 2.90571Z" fill="black"/>
+                <path d="M8.11512 0.761721C8.70716 0.169677 9.66705 0.169677 10.2591 0.761722C10.8511 1.35377 10.8511 2.31366 10.2591 2.90571L3.29118 9.87365C2.69913 10.4657 1.73924 10.4657 1.1472 9.87365C0.555159 9.28161 0.555159 8.32171 1.1472 7.72967L8.11512 0.761721Z" fill="black"/>
+            </svg>
+        </button>
+
+        <div class="modal__title display1">
+            Заказать
+        </div>
+        <div class="modal-product">
+            <div class="modal-product__img">
+                <img src="img/product17.webp" alt="">
+            </div>
+            <div class="modal-product__content">
+                <h3 class="modal-product__title">Сумка "Бекки"</h3>
+                <p class="modal-product__desc body-text _medium">
+                    <span class="gray-text">Артикул:</span> 011RC22
+                </p>
+                <div class="modal-product__price">25 000 ₽</div>
+            </div>
+        </div>
+        <form class="modal__form">
+            <fieldset class="fg">
+                <input type="text" placeholder="Ваше имя">
+            </fieldset>
+            <fieldset class="fg">
+                <input type="email" placeholder="E-mail">
+            </fieldset>
+            <fieldset class="fg">
+                <input type="tel">
+            </fieldset>
+            <fieldset class="fg">
+                <input type="text" placeholder="Ваш город">
+            </fieldset>
+            <fieldset class="fg">
+                <textarea placeholder="Сообщение"></textarea>
+            </fieldset>
+            <div class="modal__check mcheck">
+                <input type="checkbox" checked>
+                <label>
+                    Я согласен на обработку моих персональных данных
+                </label>
+            </div>
+            <div class="pay-way">
+                <h4 class="pay-way__title body-text _medium">Способы оплаты</h4>
+                <div class="pay-way__items">
+                    <div class="pay-way__item mradio">
+                        <input checked type="radio" name="payWay">
+                        <label>Оплата с сайта PayPal через PayPal</label>
+                    </div>
+                    <div class="pay-way__item mradio">
+                        <input type="radio" name="payWay">
+                        <label>Наличными при получении</label>
+                    </div>
+                    <div class="pay-way__item mradio">
+                        <input type="radio" name="payWay">
+                        <label>Безналичная оплата</label>
+                    </div>
+                </div>
+            </div>
+            <button class="modal__btn mbtn mbtn-black">ОТПРАВИТЬ</button>
+        </form>
+    </div>
+</div>
+
+<div class="modal thank-modal" id="thankModal">
+    <div class="modal__dialog">
+        <button type="button" class="modal__close mbtn" data-bs-dismiss="modal" aria-label="Close">
+            <svg width="11" height="11" viewBox="0 0 11 11" fill="none" xmlns="http://www.w3.org/2000/svg">
+                <path d="M1.14716 2.90571C0.555114 2.31366 0.555114 1.35377 1.14716 0.761724C1.7392 0.169679 2.69909 0.169679 3.29113 0.761724L10.259 7.72967C10.8511 8.32172 10.8511 9.28161 10.259 9.87365C9.66701 10.4657 8.70712 10.4657 8.11507 9.87365L1.14716 2.90571Z" fill="black"/>
+                <path d="M8.11512 0.761721C8.70716 0.169677 9.66705 0.169677 10.2591 0.761722C10.8511 1.35377 10.8511 2.31366 10.2591 2.90571L3.29118 9.87365C2.69913 10.4657 1.73924 10.4657 1.1472 9.87365C0.555159 9.28161 0.555159 8.32171 1.1472 7.72967L8.11512 0.761721Z" fill="black"/>
+            </svg>
+        </button>
+
+        <svg class="modal__icon" width="60" height="44" viewBox="0 0 60 44" fill="none" xmlns="http://www.w3.org/2000/svg">
+            <path d="M1.87891 19.0576L19.6509 40.0613L57.6192 2.09302" stroke="black" stroke-width="4"/>
+        </svg>
+
+        <div class="modal__title display1">
+            СПАСИБО
+        </div>
+        <p class="modal__desc">Мы свяжемся с Вами в <br> ближайшее время.</p>
+    </div>
+</div>
+
+
+<!-- <div class="modal-backdrop show"></div> -->
+
+    <!--  -->
+    <script src="js/libs.min.js"></script>
+<script src="js/main.min.js"></script>
+
+</body>
+
+</html>
